@@ -1,3 +1,5 @@
+%h1 All your documents
+= link_to "Create document", new_document_path
 - @documents.each do |document|
   %h2= link_to document.title, document
   %p= time_ago_in_words(document.created_at)
