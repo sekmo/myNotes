@@ -1,7 +1,7 @@
 class DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
   def index
-    @documents = Document.order("created_at DESC")
+    @documents = Document.where(user_id: current_user.id).order("created_at DESC")
   end
 
   def show
