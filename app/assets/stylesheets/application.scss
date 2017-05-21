@@ -1,8 +1,9 @@
 /*
+ *= require normalize
  *= require_self
  */
 
-@import 'normalize';
+@import 'variables';
 @import 'global';
 @import 'documents';
 @import 'welcome';

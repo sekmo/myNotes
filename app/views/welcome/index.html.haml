@@ -1,1 +1,19 @@
-%h1 Hello! This is the welcome page!
+#banner
+  .banner_content
+    %h1 MyNotes
+    %p Noteworthy personal notes
+    %button= link_to "Register for Free", new_user_registration_path
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Writing down your notes
+        %p It's scientifically proved that writing down your personal thoughts leads to physical and metal improvements!
+
+
+#bottom_cta
+  .wrapper
+    %h2 Go ahead!
+    %br
+    %button= link_to "Join Now", new_user_registration_path

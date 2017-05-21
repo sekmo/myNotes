@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title MyNotes
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      .header_inner
+        = link_to "MyNotes", root_path, id: 'logo'
+
+        %nav
+          - if user_signed_in?
+            = link_to "New Document", new_document_path
+            = link_to "Logout", destroy_user_session_path, method: :delete
+          - else
+            = link_to "Login", new_user_session_path
+
+    %p.notice= notice
+    %p.alert= alert
+    = yield
+    %footer Francesco Mari
