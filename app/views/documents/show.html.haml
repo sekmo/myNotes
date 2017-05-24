@@ -1,6 +1,9 @@
-%h1= @document.title
-%p= @document.content
+.wrapper_with_padding
+  #document_show
+    %h1.title= @document.title
+    %p= simple_format @document.content
 
-= link_to 'All documents', documents_path
-= link_to 'Edit document', edit_document_path(@document)
-= link_to 'Delete document', method: :delete, data: { confirm: 'Are you sure?' }
+    .buttons
+      = link_to 'All documents', documents_path
+      = link_to 'Edit document', edit_document_path(@document)
+      = link_to 'Delete document', method: :delete, data: { confirm: 'Are you sure?' }
