@@ -4,6 +4,6 @@
     %p= simple_format @document.content
 
     .buttons
-      = link_to 'All documents', documents_path
-      = link_to 'Edit document', edit_document_path(@document)
-      = link_to 'Delete document', method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to 'All documents', documents_path, class: 'button'
+      = link_to 'Edit document', edit_document_path(@document), class: 'button'
+      = link_to 'Delete document', document_path(@document), class: 'button', method: :delete, data: { confirm: 'Are you sure?' }

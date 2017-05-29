@@ -14,7 +14,7 @@
 		vertical-align: middle;
 		text-align: center;
 		h1 {
-			@include bold_font;
+			@include font_bold;
 			color: rgba(255,255,255, 0.9);
 			font-size: 3.5rem;
 			margin: 0;
@@ -36,7 +36,7 @@
 		margin: 0 0 .5rem 0;
 	}
 	.name {
-		@include bold_font;
+		@include font_bold;
 		color: $dark_gray;
 		margin: 0;
 		font-size: .85rem;
@@ -61,7 +61,7 @@
 		padding: 1.5rem 2.5%;
 		float: left;
 		h2 {
-			@include bold_font;
+			@include font_bold;
 			color: white;
 			margin-bottom: 0;
 		}
@@ -75,7 +75,7 @@
 	text-align: center;
 	padding: 7.5rem 0;
 	h2 {
-		@include bold_font;
+		@include font_bold;
 		color: $dark_gray;
 		font-size: 3rem;
 		margin: 0;
