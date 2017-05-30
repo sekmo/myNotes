@@ -1,20 +1,3 @@
-html, body{
-  font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  margin: 0;
-  height: 100%;
-}
-
-body{
-  padding-top: 4.5rem;
-}
-
-//ANTIALIASING
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // BOX-SIZING
 html {
   box-sizing: border-box;
@@ -23,37 +6,81 @@ html {
   box-sizing: inherit;
 }
 
-// CLEARFIX
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+input[type="checkbox"]{
+  margin-right: 3px;
 }
-.clearfix:after {
-    clear: both;
+
+//ANTIALIASING
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 // SOME STYLE OVERRIDE
 h1, h2, h3, h4, h5, h6{
-  // font-weight: normal;
+  font-weight: 400;
 }
 
-a{
-  // text-decoration: none;
-  &:visited{
-    // color: inherit;
-  }
-}
 
 p:empty{
   display: none;
 }
 
+
+
+
+body{
+  font-family: $font-family;
+  padding-top: 5rem;
+  color: $charcoal;
+  @include breakpoint($tablet){
+    padding-top: 5.75rem;
+  }
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+  max-width: 700px;
+}
+
+.wrapper_with_padding {
+	width: 90%;
+	margin: 0 auto;
+	padding: 1rem 0;
+  max-width: 700px;
+}
+
+
+
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family;
+}
+
+
+// FORMS
+
+abbr[title]{
+  text-decoration: none;
+}
+label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
-	margin-bottom: 1rem;
-	border: 1px solid $light_gray;
-	border-radius: .4rem;
+	margin-bottom: 1em;
+	border: 1px solid $light_silver;
+	border-radius: .5em;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -64,30 +91,8 @@ textarea {
 	min-height: 200px;
 }
 
-
-@mixin font_small {
-  font-size: 0.9em;
-}
-
-@mixin font_smaller {
-  font-size: 0.8em;
-}
-
-@mixin font_bold {
-	font-weight: bold;
-}
-
-
-
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
-}
-
-.wrapper_with_padding {
-	width: 80%;
-	margin: 0 auto;
-	padding: 3.5rem 0;
+input, textarea{
+  padding: 10px;
 }
 
 
@@ -96,60 +101,114 @@ textarea {
 button, .button {
 	border: none;
 	outline: none;
-	background: $green;
-	padding: 1rem 3.5rem;
-	border-radius: 0.1rem;
+	background: $sky;
+	border-radius: 0.8em;
+  &:hover{
+    background: $light_sky;
+  }
 	a {
+    display: inline-block;
+    padding: 1em 3.5em;
 		color: white;
 		text-decoration: none;
 		font-weight: bold;
+    &:hover{
+      color: white;
+    }
 	}
 }
 
 .button {
+  padding: 1rem 3.5rem;
 	color: white;
-	margin: 2rem 0;
+	margin: 2em 0;
+  cursor: pointer;
 }
 
+
+
 a {
-	color: $green;
+	color: $charcoal;
 	text-decoration: none;
 	&:hover {
-		color: $dark_gray;
+		color: $light_smoke;
 	}
 }
 
 
+
+
+
+
+// FLASH
+
+.flash-wrapper{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 9999999;
+}
+
+p.notice, p.alert{
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  padding: 1em 0;
+  background: $light_lemon;
+  color: $charcoal;
+  border-radius: 0.5em;
+  margin-top: .5em;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+h1.page_title{
+  margin-bottom: 30px;
+}
+
+a.back-link{
+  margin-top: -15px;
+  display: block;
+  margin-bottom: 30px;
+}
+
 // HEADER STYLING
 
 header {
-	background: #529ECC;
+	background: $sea;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	padding: 1.75rem 0;
 	.header_inner {
 		width: 90%;
+    max-width: 700px;
 		margin: 0 auto;
 		#logo {
 			display: inline-block;
-			width: 10rem;
-			float: left;
-			font-weight: bold;
+			font-weight: 400;
 			color: white;
-			font-size: 2.0rem;
+			font-size: 1.4em;
+      @include breakpoint($tablet){
+        font-size: 2em;
+      }
 		}
 		nav {
+      margin-top: 3px;
 			float: right;
 			a {
 				text-decoration: none;
 				color: white;
-				font-size: 1.1rem;
+				font-size: .9em;
 				line-height: 1.5;
 				margin-left: 1rem;
 				&:hover {
 					color: #eee;
 				}
+        @include breakpoint($tablet){
+          font-size: 1.1rem;
+        }
 			}
 		}
 	}

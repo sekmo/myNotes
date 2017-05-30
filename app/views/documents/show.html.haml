@@ -1,6 +1,8 @@
 .wrapper_with_padding
+  = link_to 'Back to all documents', documents_path, class: 'back-link  u-m0'
   #document_show
     %h1.title= @document.title
+    %p.document_date= @document.created_at.strftime("%d %B %Y - %H:%M")
     %p= simple_format @document.content
 
     .buttons

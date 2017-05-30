@@ -1,9 +1,12 @@
 /*
  *= require normalize
+ *= require eleganticons
  *= require_self
  */
 
 @import 'variables';
+@import 'mixins';
+@import 'utilities';
 @import 'global';
 @import 'documents';
 @import 'welcome';

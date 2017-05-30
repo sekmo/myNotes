@@ -27,21 +27,6 @@
 	}
 }
 
-#testimonial {
-	text-align: center;
-	font-size: 1.5rem;
-	color: #afb0b0;
-	padding: 3.5rem 0;
-	.quote {
-		margin: 0 0 .5rem 0;
-	}
-	.name {
-		@include font_bold;
-		color: $dark_gray;
-		margin: 0;
-		font-size: .85rem;
-	}
-}
 
 #callouts {
 	background-image: image-url("clouds2.jpg");
@@ -76,7 +61,7 @@
 	padding: 7.5rem 0;
 	h2 {
 		@include font_bold;
-		color: $dark_gray;
+		color: $smoke;
 		font-size: 3rem;
 		margin: 0;
 	}

@@ -1,3 +1,4 @@
-%h1 New document
-= render 'form'
-= link_to 'Back', documents_path
+.wrapper_with_padding
+  %h1.page_title New document
+  = link_to 'Back to all documents', documents_path, class: 'back-link'
+  = render 'form'

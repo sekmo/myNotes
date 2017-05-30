@@ -17,6 +17,7 @@
           - else
             = link_to "Login", new_user_session_path
 
-    %p.notice= notice
-    %p.alert= alert
+    .flash-wrapper
+      %p.notice= notice
+      %p.alert= alert
     = yield

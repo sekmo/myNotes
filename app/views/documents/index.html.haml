@@ -1,9 +1,7 @@
-%h1 All your documents
-= link_to "Create document", new_document_path
-
 .wrapper_with_padding
   #documents.clearfix
     - unless @documents.blank?
+      %h1.page_title All your notes
       - @documents.each do |document|
         %a{ href: (url_for document) }
           .document
@@ -11,6 +9,6 @@
             %p.date= time_ago_in_words(document.created_at)
             %p.content= truncate(document.content, length: 50)
     - else
-      %h2 Create a new document
-      %p Start creating Notes
+      %h2 Welcome to MyNotes!
+      %p Why don't you start creating a new note?
       %button= link_to "New Document", new_document_path

@@ -1,4 +1,5 @@
 class DocumentsController < ApplicationController
+  before_action :check_logged_in
   before_action :set_document, only: [:show, :edit, :update, :destroy]
   def index
     @documents = Document.where(user_id: current_user.id).order("created_at DESC")
@@ -14,7 +15,8 @@ class DocumentsController < ApplicationController
   def create
     @document = current_user.documents.build(document_params)
     if @document.save
-      redirect_to @document
+      flash[:notice] = "The note has been created successfully."
+      redirect_to documents_url
     else
       render 'new'
     end
@@ -25,6 +27,7 @@ class DocumentsController < ApplicationController
 
   def update
     if @document.update_attributes(document_params)
+      flash[:notice] = "The note has been updated."
       redirect_to @document
     else
       render 'edit'
@@ -33,7 +36,8 @@ class DocumentsController < ApplicationController
 
   def destroy
     @document.destroy
-    redirect_to 'documents_path'
+    flash[:notice] = "The note has been deleted."
+    redirect_to documents_path
   end
 
   private

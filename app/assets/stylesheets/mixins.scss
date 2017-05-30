@@ -1,0 +1,38 @@
+@mixin font_small {
+  font-size: 0.9em;
+}
+
+@mixin font_smaller {
+  font-size: 0.8em;
+}
+
+@mixin font_bold {
+	font-weight: bold;
+}
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// @include breakpoint($tablet){
+//   font-size: 1.1rem;
+// }
+@mixin breakpoint($points){
+  @media screen and (min-width: $points) {
+    @content;
+  }
+}
+
+
+// @include transition(all,2s,ease-out);
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
