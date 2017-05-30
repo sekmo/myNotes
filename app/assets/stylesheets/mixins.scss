@@ -26,6 +26,13 @@
     @content;
   }
 }
+@mixin breakpoint-max($points){
+  @media screen and (max-width: $points) {
+    @content;
+  }
+}
+
+
 
 
 // @include transition(all,2s,ease-out);

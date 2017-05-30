@@ -5,7 +5,7 @@
     %p.document_date= @document.created_at.strftime("%d %B %Y - %H:%M")
     %p= simple_format @document.content
 
-    .buttons
-      = link_to 'All documents', documents_path, class: 'button'
-      = link_to 'Edit document', edit_document_path(@document), class: 'button'
-      = link_to 'Delete document', document_path(@document), class: 'button', method: :delete, data: { confirm: 'Are you sure?' }
+    .document_actions
+      = link_to 'All documents', documents_path, class: 'button button--small'
+      = link_to 'Edit document', edit_document_path(@document), class: 'button button--small'
+      = link_to 'Delete document', document_path(@document), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button--small'

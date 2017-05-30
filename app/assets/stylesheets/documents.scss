@@ -67,22 +67,15 @@
     line-height: 1.6;
   }
 
-  .buttons {
-    margin-top: 3em;
-    margin-bottom: 1em;
-
-    a.button {
-      padding: 0.4rem 1.5rem;
-      border-radius: .8em;
-      text-decoration: none;
-      color: #529ECC;
-      border: 1px solid #529ECC;
-
-      background: transparent;
-      &:hover{
-        background: #529ECC;
-        color: white;
-      }
+  .document_actions .button{
+    width: 100%;
+    text-align: center;
+    @include breakpoint($tablet){
+      width: 32.8%;
+    }
+    @include breakpoint($medium){
+      width: inherit;
     }
   }
+
 }
