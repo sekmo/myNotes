@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: myNotes_production
-  username: myNotes
+  database: mynotes_production
+  username: mynotes
   password: <%= ENV['MYNOTES_DATABASE_PASSWORD'] %>
