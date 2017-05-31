@@ -1,73 +1,60 @@
 
 // STYLING FOR WELCOME PAGE
 
-#banner {
+.banner {
 	background-image: url(image_path("coffee2.jpg"));
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: top center;
-	width: 100%;
-	min-height: 600px;
+	background-position: middle center;
 	display: table;
-	.banner_content {
+	width: 100%;
+	height: 440px;
+	@include breakpoint($tablet){
+		height: 600px;
+	}
+	&__content {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
+		color: rgba(255,255,255, 0.9);
 		h1 {
 			@include font_bold;
-			color: rgba(255,255,255, 0.9);
 			font-size: 3.5rem;
 			margin: 0;
 		}
 		p {
 			font-size: 1.5rem;
 			margin: 0 0 2.5rem 0;
-			color: rgba(255,255,255, 0.6);
+
 		}
 	}
 }
 
 
-#callouts {
+.callout {
 	background-image: image-url("clouds2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
 	width: 100%;
-	min-height: 500px;
+	height: 500px;
 	display: table;
-	.callout_inner {
+	&__content {
 		display: table-cell;
 		vertical-align: middle;
-	}
-	.callout {
 		text-align: center;
 		width: 100%;
 		padding: 1.5rem 2.5%;
-		float: left;
-		h2 {
-			@include font_bold;
+		h1 {
 			color: white;
 			margin-bottom: 0;
 		}
 		p {
 			color: rgba(255, 255, 255, 0.9);
 		}
-	}
-}
-
-#bottom_cta {
-	text-align: center;
-	padding: 7.5rem 0;
-	h2 {
-		@include font_bold;
-		color: $smoke;
-		font-size: 3rem;
-		margin: 0;
-	}
-	p {
-			font-size: 1.25rem;
-			margin: 0 0 2.5rem 0;
-			color: #a7a8a8;
+		a.button{
+			margin-top: 20px;
+			max-width: 100%;
 		}
+	}
 }

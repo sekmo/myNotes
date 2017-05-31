@@ -10,7 +10,7 @@
     text-align: center;
 
     .title {
-      font-weight: 300;
+      font-weight: 400;
       color: #777;
       margin: 0;
       left: 4.5%;
@@ -49,14 +49,13 @@
 
 
 // DOCUMENT SHOW
-#document_show {
-  .title {
-    font-weight: 300;
-    font-size: 2em;
-    margin-bottom: 1rem;
+.document-show {
+  &__title {
+    font-size: 3rem;
+    margin-bottom: .2em;
   }
 
-  .document_date{
+  &__date{
     margin-top: 0;
     border-bottom: 1px solid $silver;
     color: $light_charcoal;
@@ -67,15 +66,17 @@
     line-height: 1.6;
   }
 
-  .document_actions .button{
-    width: 100%;
-    text-align: center;
-    @include breakpoint($tablet){
-      width: 32.8%;
-    }
-    @include breakpoint($medium){
-      width: inherit;
+  &__actions {
+    margin-top: 40px;
+    .button{
+      width: 100%;
+      text-align: center;
+      @include breakpoint($tablet){
+        width: 32.6%;
+      }
+      @include breakpoint($medium){
+        width: inherit;
+      }
     }
   }
-
 }

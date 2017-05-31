@@ -1,7 +1,7 @@
-.wrapper_with_padding
+.wrapper-with-padding
   #documents.clearfix
     - unless @documents.blank?
-      %h1.page_title All your notes
+      %h1.page-title All your notes
       - @documents.each do |document|
         %a{ href: (url_for document) }
           .document

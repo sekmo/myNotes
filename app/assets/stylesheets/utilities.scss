@@ -8,6 +8,12 @@
     clear: both;
 }
 
+//HIDE EMTPY PARAGRAPHS
+p:empty{
+  display: none;
+}
+
+
 .u-m0{
   margin: 0 !important;
 }

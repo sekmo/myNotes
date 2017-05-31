@@ -1,4 +1,9 @@
+$text_color: $charcoal;
+$font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+
+
 // BOX-SIZING
+
 html {
   box-sizing: border-box;
 }
@@ -6,144 +11,23 @@ html {
   box-sizing: inherit;
 }
 
-input[type="checkbox"]{
-  margin-right: 3px;
-}
-
 //ANTIALIASING
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-// SOME STYLE OVERRIDE
-h1, h2, h3, h4, h5, h6{
-  font-weight: 400;
-}
-
-
-p:empty{
-  display: none;
-}
-
-
-
+// BODY, ANCHORS AND HEADERS
 
 body{
   font-family: $font-family;
   padding-top: 5rem;
-  color: $charcoal;
+  color: $text_color;
   @include breakpoint($tablet){
     padding-top: 5.75rem;
   }
 }
-
-.wrapper {
-	width: 90%;
-	margin: 0 auto;
-  max-width: 700px;
-}
-
-.wrapper_with_padding {
-	width: 90%;
-	margin: 0 auto;
-	padding: 1rem 0;
-  max-width: 700px;
-}
-
-
-
-
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: $font-family;
-}
-
-
-// FORMS
-
-abbr[title]{
-  text-decoration: none;
-}
-label{
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea {
-	width: 100%;
-	margin-bottom: 1em;
-	border: 1px solid $light_silver;
-	border-radius: .5em;
-}
-
-input[type="text"], input[type="email"], input[type="password"] {
-	height: 40px;
-}
-
-textarea {
-	min-height: 200px;
-}
-
-input, textarea{
-  padding: 10px;
-}
-
-
-// BUTTON STYLING
-
-button.button, input[type="submit"].button {
-  padding: 1em 3.5em;
-  margin-bottom: 10px;
-	border: none;
-	outline: none;
-  white-space: nowrap;
-	background: $sky;
-  color: white;
-  cursor: pointer;
-	border-radius: 0.8em;
-  &:hover{
-    background: $light_sky;
-    color: white;
-  }
-  &--small{
-    padding: 0.8em 3em;
-  }
-}
-
-a.button {
-  display: inline-block;
-  margin-bottom: 5px;
-  padding: 1em 3.5em;
-  background: $sky;
-  color: white;
-  white-space: nowrap;
-  border-radius: 0.8em;
-  text-decoration: none;
-  &:hover{
-    background: $light_sky;
-    color: white;
-  }
-  &--small{
-    font-size: 0.9em;
-    padding: 0.8em 2.2em;
-  }
-}
-
-// .button {
-//   padding: 1rem 3.5rem;
-// 	color: white;
-// 	margin: 2em 0;
-//   cursor: pointer;
-// }
-
-
 
 a {
 	color: $charcoal;
@@ -153,53 +37,36 @@ a {
 	}
 }
 
-
-
-
-
-
-// FLASH
-
-.flash-wrapper{
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  z-index: 9999999;
-}
-
-p.notice, p.alert{
-  margin: 0 auto;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  padding: 1em 0;
-  background: $light_lemon;
-  color: $charcoal;
-  border-radius: 0.5em;
-  margin-top: .5em;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+h1, h2, h3, h4, h5, h6{
+  font-weight: 400;
 }
 
 
-h1.page_title{
-  margin-bottom: 30px;
+
+
+
+// WRAPPER
+
+.wrapper,
+.wrapper-with-padding {
+	width: 90%;
+	margin: 0 auto;
+  max-width: 700px;
+}
+.wrapper-with-padding {
+	padding: 1rem 0;
 }
 
-a.back-link{
-  margin-top: -15px;
-  display: block;
-  margin-bottom: 30px;
-}
 
-// HEADER STYLING
+// HEADER
 
-header {
+.header {
 	background: $sea;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	padding: 1.75rem 0;
-	.header_inner {
+	&__content {
 		width: 90%;
     max-width: 700px;
 		margin: 0 auto;
@@ -233,6 +100,7 @@ header {
 }
 
 
+// FOOTER
 
 footer {
   @include font_small;
@@ -245,4 +113,125 @@ footer {
 		margin: 0;
 		font-size: .65rem;
 	}
+}
+
+
+
+
+
+// PAGE TITLE AND BACK LINK
+
+h1.page-title{
+  margin-bottom: 30px;
+}
+
+a.back-link{
+  margin-top: -15px;
+  display: block;
+  margin-bottom: 30px;
+  width: 12em;
+}
+
+
+
+// FORMS
+
+form,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family;
+  color: $text_color;
+}
+
+abbr[title]{
+  text-decoration: none;
+}
+label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	margin-bottom: 1em;
+	border: 1px solid $light_silver;
+	border-radius: .5em;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 40px;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+input, textarea{
+  padding: 10px;
+}
+
+input[type="checkbox"]{
+  margin-right: 3px;
+}
+
+
+
+// BUTTONS
+
+button.button, input[type="submit"].button, a.button {
+  margin-bottom: 10px;
+  padding: 1em 3.5em;
+  background: $sky;
+  color: white;
+	border: none;
+	outline: none;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+	border-radius: 0.8em;
+  &:hover{
+    background: $light_sky;
+    color: white;
+  }
+  &--small{
+    font-size: 0.9em;
+    padding: 0.8em 3em;
+  }
+}
+
+a.button {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+// FLASH
+
+.flash-wrapper{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 9999999;
+}
+
+p.notice, p.alert{
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  padding: 1em 0;
+  background: $light_lemon;
+  color: $charcoal;
+  border-radius: 0.5em;
+  margin-top: .5em;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }

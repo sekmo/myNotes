@@ -1,12 +1,13 @@
-#banner
-  .banner_content
+.banner
+  .banner__content
     %h1 MyNotes
-    %p Noteworthy personal notes
+    %p Noteworthy personal notes.
     = link_to "Register for Free", new_user_registration_path, class: 'button'
 
-#callouts
-  .callout_inner
+.callout
+  .callout__content
     .wrapper
-      .callout
-        %h2 Writing down your notes
-        %p It's scientifically proved that writing down your personal thoughts leads to physical and mental improvements!<br>What you remember about an event may differ quite a bit from what someone else remembers. There is a wide variety of interpretations of reality. And then when you try to remember that interpretation of an event later on it can change even more.
+      %h1 Writing down your notes
+      %p It's scientifically proved that writing down your personal thoughts leads to great physical and mental improvements!
+      %p What you remember about an event may differ quite a bit from what someone else remembers. There is a wide variety of interpretations of reality. And then when you try to remember that interpretation of an event later on it can change even more.
+      = link_to "Start a new habit today", new_user_registration_path, class: 'button'

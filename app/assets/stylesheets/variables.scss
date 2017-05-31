@@ -1,13 +1,4 @@
-$font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
-
-$mobile: 375px;
-$tablet: 600px;
-$medium: 900px;
-$large: 1200px;
-$huge: 1400px;
-
-
-
+// COLORS
 
 $ruby: #FF6A6A;
 $light_ruby: #FE8E8E;
@@ -36,3 +27,11 @@ $smoke: #7D828A;
 $light_smoke: #8B9199;
 $charcoal: #474B50;
 $light_charcoal: #75787B;
+
+// BREAKPOINTS
+
+$mobile: 375px;
+$tablet: 600px;
+$medium: 900px;
+$large: 1200px;
+$huge: 1400px;

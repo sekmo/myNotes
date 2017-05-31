@@ -1,11 +1,11 @@
-.wrapper_with_padding
+.wrapper-with-padding
   = link_to 'Back to all documents', documents_path, class: 'back-link  u-m0'
-  #document_show
-    %h1.title= @document.title
-    %p.document_date= @document.created_at.strftime("%d %B %Y - %H:%M")
+  .document-show
+    %h1.document-show__title= @document.title
+    %p.document-show__date= @document.created_at.strftime("%d %B %Y - %H:%M")
     %p= simple_format @document.content
 
-    .document_actions
+    .document-show__actions
       = link_to 'All documents', documents_path, class: 'button button--small'
       = link_to 'Edit document', edit_document_path(@document), class: 'button button--small'
       = link_to 'Delete document', document_path(@document), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button--small'
