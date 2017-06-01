@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :check_logged_in
+  #before_action :check_document_owner, only: [:show, :edit, :update, :destroy]
   before_action :set_document, only: [:show, :edit, :update, :destroy]
   def index
     @documents = Document.where(user_id: current_user.id).order("created_at DESC")
@@ -44,7 +45,18 @@ class DocumentsController < ApplicationController
 
   def set_document
     @document = Document.find(params[:id])
+    if @document.user_id != current_user.id
+      redirect_to_root_with_request_error
+    end
+    rescue ActiveRecord::RecordNotFound
+      redirect_to_root_with_request_error
   end
+
+  def redirect_to_root_with_request_error
+    flash[:notice] = "Error in your request"
+    redirect_to root_url
+  end
+
   def document_params
     params.require(:document).permit(:title, :content)
   end
