@@ -1,7 +1,7 @@
 // DOCUMENTS INDEX
 
-#documents {
-  .document {
+.document-index {
+  &__document {
     //background: #ededee;
     color: $smoke;
     border-bottom: 1px solid $silver;
@@ -36,22 +36,19 @@
   }
 }
 
-#documents a:last-child .document{
+.document-index a:last-child .document{
   border: none;
 }
 
 
-
-
-
-
-
-
-
 // DOCUMENT SHOW
+
 .document-show {
   &__title {
-    font-size: 3rem;
+    font-size: 2rem;
+    @include breakpoint($tablet){
+      font-size: 3rem;
+    }
     margin-bottom: .2em;
   }
 

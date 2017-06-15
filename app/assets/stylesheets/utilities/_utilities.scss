@@ -1,0 +1,59 @@
+// Clearfix
+
+%clearfix,
+.clearfix{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Margin utilities
+
+.u-m0{
+  margin: 0 !important;
+}
+
+.u-mt0{
+  margin-top: 0 !important;
+}
+
+.u-mb0{
+  margin-bottom: 0 !important;
+}
+
+.u-p0{
+  padding: 0 !important;
+}
+
+.u-pt0{
+  padding-top: 0 !important;
+}
+
+.u-pb0{
+  padding-bottom: 0 !important;
+}
+
+
+// Center elements
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+// Screen reader text
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

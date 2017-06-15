@@ -4,9 +4,10 @@
  *= require_self
  */
 
-@import 'variables';
-@import 'mixins';
-@import 'utilities';
-@import 'global';
-@import 'documents';
+@import "utilities/index";
+@import "base/base";
+@import "layout/index";
+@import "modules/*";
+@import "states/index";
 @import 'welcome';
+@import 'documents';

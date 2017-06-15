@@ -49,7 +49,7 @@ class DocumentsController < ApplicationController
       redirect_to_root_with_request_error
     end
     rescue ActiveRecord::RecordNotFound
-      redirect_to_root_with_request_error
+      redirect_with_general_error
   end
 
   def redirect_to_root_with_request_error

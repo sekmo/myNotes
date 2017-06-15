@@ -1,0 +1,21 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+nav {
+  margin-top: 3px;
+  float: right;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+    line-height: 1.5;
+    margin-left: 1rem;
+    &:hover {
+      color: #eee;
+    }
+    @include breakpoint($tablet){
+      font-size: 1.1rem;
+    }
+  }
+}

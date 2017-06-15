@@ -32,14 +32,28 @@
   }
 }
 
-
-
-
 // @include transition(all,2s,ease-out);
-@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+@mixin transition($what: all, $time: .3s, $how: ease) {
     -webkit-transition: $what $time $how;
     -moz-transition:    $what $time $how;
     -ms-transition:     $what $time $how;
     -o-transition:      $what $time $how;
     transition:         $what $time $how;
+}
+
+
+// Pseudo-element shapes
+
+@mixin pseudo-el($el, $el-w: null, $el-h: null) {
+	@if $el == "before" or $el == "after" {
+	  &:#{$el} {
+		  @extend %pseudos;
+		  width: $el-w;
+	  	height: $el-h;
+	    @content;
+	  }
+	}
+	@else {
+    @error "`#{$el}` is not a valid pseudo-element.";
+	}
 }
