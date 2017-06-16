@@ -18,7 +18,7 @@
 
 $('document').ready(function() {
   $('.flash-wrapper').css('display', 'none');
-  $('.flash-wrapper').css('transform', 'translate(-100px, 0);');
+  //$('.flash-wrapper').css('transform', 'translate(-100px, 0);');
   setTimeout(function() {
     $('.flash-wrapper').fadeIn(400);
   }, 500);

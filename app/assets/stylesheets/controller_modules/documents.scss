@@ -1,0 +1,90 @@
+// ==========================================================================
+// Document index
+// ==========================================================================
+
+.document-index {
+  &__document {
+    //background: #ededee;
+    color: $smoke;
+    display: flex;
+    border-bottom: 1px solid $silver;
+    padding: 1em 2.5%;
+
+    &__date {
+      font-weight: lighter;
+      padding-top: 1.2rem;
+      font-size: 0.75em;
+      text-align: center;
+      margin-right: 3rem;
+    }
+
+    &__content {
+      flex: 1;
+
+      &__title {
+        font-weight: 400;
+        color: #777;
+        margin: 0;
+        left: 4.5%;
+        @include breakpoint($tablet){
+          font-size: 1.4em;
+        }
+      }
+
+      &__excerpt {
+        display: none;
+        @include breakpoint($tablet){
+          display: block;
+          margin: 1em auto 0;
+          margin-bottom: 0;
+          color: #666;
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+}
+
+// .document-index a:last-child .document-index__document{
+//   border: none;
+// }
+
+
+// ==========================================================================
+// Document show
+// ==========================================================================
+
+.document-show {
+  &__title {
+    font-size: 2rem;
+    @include breakpoint($tablet){
+      font-size: 3rem;
+    }
+    margin-bottom: .2em;
+  }
+
+  &__date{
+    margin-top: 0;
+    border-bottom: 1px solid $silver;
+    color: $light_charcoal;
+    padding-bottom: 0.8em;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  &__actions {
+    margin-top: 40px;
+    .button{
+      width: 100%;
+      text-align: center;
+      @include breakpoint($tablet){
+        width: 32.6%;
+      }
+      @include breakpoint($medium){
+        width: inherit;
+      }
+    }
+  }
+}
