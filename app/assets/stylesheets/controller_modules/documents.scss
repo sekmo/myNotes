@@ -4,7 +4,7 @@
 
 .document-index {
   &__document {
-    //background: #ededee;
+    color: $smoke;
     display: flex;
     border-bottom: 1px solid $silver;
     padding: 1em 2.5%;
@@ -39,7 +39,6 @@
           display: block;
           margin: 1em auto 0;
           margin-bottom: 0;
-          // color: #666;
           font-size: 0.75em;
         }
       }
