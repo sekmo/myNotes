@@ -1,8 +1,9 @@
 .wrapper-with-padding
-  = link_to 'Back to all documents', documents_path, class: 'back-link  u-m0'
+  =link_to documents_path, class: 'back-link  u-mb0' do
+    Back to all documents
   .document-show
     %h1.document-show__title= @document.title
-    %p.document-show__date= @document.created_at.strftime("%d %B %Y - %H:%M")
+    %p.document-show__date= @document.created_at.strftime("%a %d %B %Y")
     %p= simple_format @document.content
 
     .document-show__actions

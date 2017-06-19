@@ -1,0 +1,41 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+button.button,
+input[type="submit"].button,
+a.button {
+  margin-bottom: 10px;
+  padding: 1em 3.5em;
+  background: $sky;
+  color: white;
+	border: none;
+	outline: none;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+	border-radius: 0.8em;
+  transition: background-color .25s ease;
+  &:hover{
+    background: $light_sky;
+    color: white;
+  }
+  &--small{
+    font-size: 0.9em;
+    padding: 1em 3em;
+  }
+}
+a.button {
+  display: inline-block;
+}
+
+
+a.back-link{
+  display: inline-block;
+  margin-bottom: 2rem;
+  &:before {
+    content: '\f104';
+    font-family: 'FontAwesome';
+    margin-right: .3em;
+  }
+}
