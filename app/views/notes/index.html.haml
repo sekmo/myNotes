@@ -1,0 +1,19 @@
+.wrapper-with-padding
+  .note-index.clearfix
+    - unless @notes.blank?
+      %h1.page-title All your notes
+      - @notes.each do |note|
+        .note-index__note
+          .note-index__note__date= time_ago_in_words(note.created_at)
+          .note-index__note__content
+            %a{ href: (url_for note) }
+              %p.note-index__note__content__title= note.title
+              %p.note-index__note__content__excerpt= truncate(note.content, length: 50)
+          .note-index__note__actions
+            =link_to fa_icon("eye"), note, title: 'View entry'
+            =link_to fa_icon("pencil"), edit_note_path(note), title: 'Edit Note'
+            =link_to fa_icon("trash-o"), note, method: :delete, data: { confirm: 'Are you sure to delete the note?' }, title: 'Delete note'
+    - else
+      %h2 Welcome to MyNotes!
+      %p Why don't you start creating a new note?
+      %button= link_to "New Note", new_note_path, class: 'button'

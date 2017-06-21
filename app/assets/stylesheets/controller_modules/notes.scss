@@ -1,9 +1,9 @@
 // ==========================================================================
-// Document index
+// Note index
 // ==========================================================================
 
-.document-index {
-  &__document {
+.note-index {
+  &__note {
     color: $smoke;
     display: flex;
     border-bottom: 1px solid $silver;
@@ -59,16 +59,16 @@
   }
 }
 
-.document-index__document:last-child{
+.note-index__note:last-child{
   border: none;
 }
 
 
 // ==========================================================================
-// Document show
+// Note show
 // ==========================================================================
 
-.document-show {
+.note-show {
   &__title {
     font-size: 2rem;
     @include breakpoint($tablet){

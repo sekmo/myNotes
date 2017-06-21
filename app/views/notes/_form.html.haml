@@ -1,7 +1,7 @@
-= form_for @document do |f|
+= form_for @note do |f|
   = f.label :title
   = f.text_field :title
   = f.label :content
   = f.text_area :content
   = f.submit class: 'button'
-  = link_to 'Cancel', @document, class: 'button'
+  = link_to 'Cancel', @note, class: 'button'

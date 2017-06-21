@@ -1,0 +1,12 @@
+.wrapper-with-padding
+  =link_to notes_path, class: 'back-link  u-mb0' do
+    Back to all notes
+  .note-show
+    %h1.note-show__title= @note.title
+    %p.note-show__date= @note.created_at.strftime("%a %d %B %Y")
+    %p= simple_format @note.content
+
+    .note-show__actions
+      = link_to 'All notes', notes_path, class: 'button button--small'
+      = link_to 'Edit note', edit_note_path(@note), class: 'button button--small'
+      = link_to 'Delete note', note_path(@note), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button--small'
