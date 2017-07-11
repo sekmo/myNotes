@@ -1,0 +1,14 @@
+.cke_editable {
+  font-family: 'Proxima nova', sans-serif;
+  color: #777;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+.cke_path {
+  display: none;
+}
+
+.cke_reset {
+  margin-bottom: 50px !important;
+}

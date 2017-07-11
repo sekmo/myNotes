@@ -2,7 +2,8 @@ class NotesController < ApplicationController
   before_action :check_logged_in
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   def index
-    @notes = Note.where(user_id: current_user.id).order("created_at DESC")
+    @notes_by_month = Note.page(params[:page]).per(10).grouped_by_month(current_user)
+    @notes = Note.where(user: current_user).page(params[:page]).per(10)
   end
 
   def show
@@ -18,6 +19,7 @@ class NotesController < ApplicationController
       flash[:notice] = "The note has been created successfully."
       redirect_to notes_url
     else
+      flash.now[:alert] = "Error in the creation of the note."
       render 'new'
     end
   end
@@ -48,7 +50,7 @@ class NotesController < ApplicationController
       redirect_to_root_with_request_error
     end
     rescue ActiveRecord::RecordNotFound
-      redirect_with_general_error
+      redirect_to_root_with_request_error
   end
 
   def redirect_to_root_with_request_error
@@ -57,6 +59,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:title, :content)
+    params.require(:note).permit(:title, :content, :date)
   end
 end

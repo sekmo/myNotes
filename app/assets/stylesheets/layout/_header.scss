@@ -9,8 +9,8 @@
 	width: 100%;
 	padding: 1.75rem 0;
 	&__content {
-		width: 90%;
-    max-width: 700px;
+		width: 95%; width: calc(100% - 1.4rem);
+    max-width: $max-width;
 		margin: 0 auto;
 		#logo {
 			display: inline-block;

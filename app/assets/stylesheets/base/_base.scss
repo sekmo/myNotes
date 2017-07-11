@@ -18,8 +18,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Hide Chrome blue outline
 
-body{
+textarea:focus, input:focus{
+    outline: none;
+    background: $light_snow;
+}
+
+*:focus {
+    outline: none;
+}
+
+// Body, finally
+
+body {
   font-family: $font-family;
   padding-top: 5rem;
   color: $text_color;
@@ -30,7 +42,7 @@ body{
 
 // Hide emtpy paragraphs
 
-p:empty{
+p:empty {
   display: none;
 }
 
@@ -43,7 +55,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-weight: 400;
+  font-weight: 300;
 }
 
 // FORMS
@@ -58,34 +70,41 @@ textarea {
   color: $text-color;
 }
 
-abbr[title]{
+abbr[title] {
   text-decoration: none;
 }
-label{
+label {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
 	width: 100%;
 	margin-bottom: 1em;
 	border: 1px solid $light_silver;
 	border-radius: .5em;
 }
 
+select {
+  margin-bottom: 1em;
+}
+
 input[type="text"], input[type="email"], input[type="password"] {
-	height: 40px;
+	height: rem(40px);
 }
 
 textarea {
-	min-height: 200px;
+	min-height: rem(200px);
 }
 
-input, textarea{
-  padding: 10px;
+input, textarea {
+  padding: rem(10px);
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   margin-right: 3px;
 }
 

@@ -7,18 +7,16 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .flash-wrapper
+      %p.notice= notice
+      %p.alert= alert
     .header
       .header__content
         = link_to "MyNotes", root_path, id: 'logo'
-
-        %nav
+        %nav.main-nav
           - if user_signed_in?
             = link_to "New Note", new_note_path
             = link_to "Logout", destroy_user_session_path, method: :delete
           - else
             = link_to "Login", new_user_session_path
-
-    .flash-wrapper
-      %p.notice= notice
-      %p.alert= alert
     = yield

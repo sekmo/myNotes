@@ -2,20 +2,20 @@
 // Nav
 // ==========================================================================
 
-nav {
+.main-nav {
   margin-top: 3px;
   float: right;
+  @include breakpoint($tablet){
+    margin-top: .4rem;
+    font-size: 1.1rem;
+  }
   a {
     text-decoration: none;
-    color: white;
-    font-size: .9em;
+    color: rgba(255,255,255,.85);
     line-height: 1.5;
     margin-left: 1rem;
     &:hover {
-      color: #eee;
-    }
-    @include breakpoint($tablet){
-      font-size: 1.1rem;
+      color: white;
     }
   }
 }

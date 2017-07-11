@@ -1,21 +1,50 @@
 // ==========================================================================
-// Note index
+// .edit_note (rails puts underscores on forms)
+// ==========================================================================
+
+.edit_note,
+.new_note {
+  > .button {
+    @include breakpoint-max($phablet) {
+      width: 49%;
+      text-align: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+// ==========================================================================
+// .note-index
 // ==========================================================================
 
 .note-index {
+  &__month {
+    margin-bottom: 2rem;
+  }
   &__note {
-    color: $smoke;
     display: flex;
-    border-bottom: 1px solid $silver;
-    padding: 1em 2.5%;
-
+    border: 1px solid $light_silver;
+    border-bottom: none;
+    background: white;
+    padding: .6em 2.5%;
+    &:last-of-type {
+      border-bottom: 1px solid $light_silver;
+    }
     &__date {
+      font-size: 0.7rem;
       font-weight: lighter;
-      font-size: 0.75em;
       text-align: center;
-      margin-right: 2rem;
+      margin-left: .5rem;
+      margin-right: 1.5rem;
       @include breakpoint($tablet){
-        margin-top: 1.2rem;
+        margin-top: .6rem;
+      }
+      & > span {
+        display: block;
+        &:first-child {
+          font-size: 1.5em;
+        }
       }
     }
 
@@ -24,68 +53,79 @@
       overflow: hidden;
 
       &__title {
-        margin: 0;
+        margin: .4rem .4rem 0 0;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         @include breakpoint($tablet){
-          font-size: 1.4em;
+          font-size: 1.2em;
         }
       }
 
       &__excerpt {
         display: none;
+        color: #888;
+        font-size: 0.9rem;
+        margin-top: .2em;
+        margin-bottom: 0;
         @include breakpoint($tablet){
           display: block;
-          margin: 1em auto 0;
-          margin-bottom: 0;
-          font-size: 0.75em;
         }
       }
     }
 
     &__actions {
+      margin-top: .3rem;
+      @include breakpoint($tablet) {
+        margin-top: .9rem;
+      }
       & a > i {
         margin-left: 5px;
         margin-right: 5px;
         display: inline-block;
         font-size: 20px;
-        @include breakpoint($tablet) {
-          margin-top: 13px;
-        }
       }
     }
 
   }
 }
 
-.note-index__note:last-child{
-  border: none;
-}
+// .note-index__note:last-child{
+//   border-bottom: none;
+// }
 
 
 // ==========================================================================
-// Note show
+// .note-show
 // ==========================================================================
 
 .note-show {
+  font-size: 1.2rem;
   &__title {
     font-size: 2rem;
-    @include breakpoint($tablet){
-      font-size: 3rem;
-    }
     margin-bottom: .2em;
   }
-
   &__date{
     margin-top: 0;
-    border-bottom: 1px solid $silver;
-    color: $light_charcoal;
+    color: $light_smoke;
+    text-transform: uppercase;
+    font-size: .8rem;
     padding-bottom: 0.8em;
+    border-bottom: 1px solid $snow;
+    letter-spacing: 2px;
+    @include breakpoint(0) {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   p {
     line-height: 1.6;
+    font-weight: 300;
+    & >strong,
+    & > b {
+      font-weight: 600;
+    }
   }
 
   &__actions {

@@ -1,7 +1,11 @@
 = form_for @note do |f|
+  = error_messages_for @note
+  = f.label :date
+  .new_note__date= f.date_select(:date)
   = f.label :title
   = f.text_field :title
   = f.label :content
-  = f.text_area :content
-  = f.submit class: 'button'
-  = link_to 'Cancel', @note, class: 'button'
+  -# = f.text_area :content, class: 'ckedit'
+  = f.cktext_area :content
+  = f.submit class: 'button u-mt1'
+  = link_to 'Cancel', @note, class: 'button u-mt1'

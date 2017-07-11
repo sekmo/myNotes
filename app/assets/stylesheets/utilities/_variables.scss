@@ -3,6 +3,7 @@
 // ==========================================================================
 
 // Tasty Colors
+// ==========================================================================
 
 $ruby: #FF6A6A;
 $light_ruby: #FE8E8E;
@@ -23,6 +24,9 @@ $light_lavender: #B9A2F0;
 $rose: #F09BC2;
 $light_rose: #F3B4D1;
 
+
+$snow: #EEEEEE;
+$light_snow: #F8F8F8;
 $chalk: #E2E3E5;
 $light_chalk: #EAEBEC;
 $silver: #B8BDC5;
@@ -34,31 +38,41 @@ $light_charcoal: #75787B;
 
 
 // Font family, color, size
+// ==========================================================================
 
-$font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+//$font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+$font-family: 'Proximanova', sans-serif;
 $text-color: $charcoal;
-
-$font-size       : 16px;
+//$font-size is declared in _functions.scss
 $line-height     : 24px;
-$letter-spacing  : 1px;
 
 
 // Font Weights
+// ==========================================================================
 
-$font-weight--thin       : 100;
-$font-weight--light      : 300;
-$font-weight--medium     : 400;
-$font-weight--bold       : 700;
-$font-weight--ultra-bold : 900;
+// $font-weight--thin       : 100;
+// $font-weight--light      : 300;
+// $font-weight--medium     : 400;
+// $font-weight--bold       : 700;
+// $font-weight--ultra-bold : 900;
+
+
+// Max width for wrapper and header
+// ==========================================================================
+
+$max-width: rem(700px);
+
 
 
 // Border-radius
+// ==========================================================================
 
 $border-radius: .5em;
 $border-radius--round: 50%;
 
 
 // Breakpoints
+// ==========================================================================
 
 $mobile: 375px;
 $phablet: 414px;

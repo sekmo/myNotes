@@ -2,8 +2,14 @@
 // Functions
 // ==========================================================================
 
+$font_size: 16px;  //declared here because _functions.scss is loaded before _variables.scss
+
 // Calculate em values
 
 @function em($target, $context: $font-size) {
 	@return ($target / $context) * 1em;
+}
+
+@function rem($target) {
+	@return ($target / $font-size) * 1em;
 }

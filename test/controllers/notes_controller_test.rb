@@ -6,13 +6,11 @@ class NotesControllerTest < ActionDispatch::IntegrationTest
     @note = notes(:one)
     @user = users(:francesco)
   end
-  # test "the truth" do
-  #   assert true
-  # end
+
   test "should create note" do
     sign_in @user
     assert_difference('Note.count') do
-      post notes_url, params: { note: { title: @note.title, content: @note.content } }
+      post notes_url, params: { note: { title: @note.title, date: @note.date, content: @note.content } }
     end
     assert_redirected_to notes_url
   end

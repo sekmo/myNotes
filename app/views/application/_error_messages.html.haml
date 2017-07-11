@@ -1,0 +1,7 @@
+- if object && object.errors.any?
+  .error-explanation
+    -#%h2 #{pluralize(object.errors.size, 'error')} prohibited this record for being saved.
+    %p There were problems in the following fields:
+    %ul
+      - object.errors.full_messages.each do |msg|
+        %li= msg

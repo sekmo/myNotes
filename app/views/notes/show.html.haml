@@ -3,7 +3,7 @@
     Back to all notes
   .note-show
     %h1.note-show__title= @note.title
-    %p.note-show__date= @note.created_at.strftime("%a %d %B %Y")
+    %p.note-show__date= @note.created_at.strftime("%A, %d %B %Y")
     %p= simple_format @note.content
 
     .note-show__actions

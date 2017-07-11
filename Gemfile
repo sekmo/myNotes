@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem "font-awesome-rails"
+gem "awesome_print"
+gem 'ckeditor', '~> 4.1', '>= 4.1.6'
+gem 'kaminari', '~> 0.17.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -39,6 +42,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.1'
+gem 'ffaker', '~> 2.2'
 
 
 group :development, :test do
@@ -53,7 +57,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  #gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :test do
