@@ -5,6 +5,7 @@
 button.button,
 input[type="submit"].button,
 a.button {
+  font-size: 1rem;
   margin-bottom: 10px;
   padding: 1em 3.5em;
   background: $sky;
@@ -21,8 +22,8 @@ a.button {
     color: white;
   }
   &--small{
-    font-size: 0.9em;
-    padding: 1em 3em;
+    // font-size: 0.9rem;
+    // padding: 1em 3em;
   }
 }
 a.button {
