@@ -33,6 +33,7 @@ textarea:focus, input:focus{
 
 body {
   font-family: $font-family;
+  background: aliceblue;
   padding-top: 5rem;
   color: $text_color;
   @include breakpoint($tablet){
