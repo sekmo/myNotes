@@ -1,20 +1,4 @@
 // ==========================================================================
-// .edit_note (rails puts underscores on forms)
-// ==========================================================================
-
-.edit_note,
-.new_note {
-  > .button {
-    @include breakpoint-max($phablet) {
-      width: 49%;
-      text-align: center;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-  }
-}
-
-// ==========================================================================
 // .note-index
 // ==========================================================================
 
@@ -139,6 +123,23 @@
       @include breakpoint($medium){
         width: inherit;
       }
+    }
+  }
+}
+
+
+// ==========================================================================
+// .edit_note (rails puts underscores on forms)
+// ==========================================================================
+
+.edit_note,
+.new_note {
+  > .button {
+    @include breakpoint-max($phablet) {
+      width: 49%;
+      text-align: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
 }
