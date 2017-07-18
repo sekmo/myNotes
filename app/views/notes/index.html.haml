@@ -11,8 +11,7 @@
             .note-index__note
               .note-index__note__date
                 %span= note.date.strftime('%d')
-                %span= I18n.t("date.month_names")[note.date.month]
-                -#%span= note.date.year
+                %span= I18n.t("date.abbr_month_names")[note.date.month]
               .note-index__note__content
                 %a{ href: (url_for note) }
                   %p.note-index__note__content__title= note.title

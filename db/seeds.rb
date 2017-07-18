@@ -8,5 +8,10 @@
 
 
 50.times do
-  Note.create(date: rand(2.years).seconds.ago, title: FFaker::Book.title, content: FFaker::BaconIpsum.paragraphs.join('\n'), user: User.find(1))
+  Note.create(
+    date: rand(2.years).seconds.ago,
+    title: Faker::Hipster.sentence,
+    content: Faker::Hipster.paragraphs(5).join("\n"),
+    user: User.find(1)
+  )
 end

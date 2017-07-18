@@ -42,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.1'
-gem 'ffaker', '~> 2.2'
+gem 'faker', '~> 1.6', '>= 1.6.3'
 
 
 group :development, :test do
