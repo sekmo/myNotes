@@ -3,8 +3,8 @@ require 'test_helper'
 class NotesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
   setup do
-    @note = notes(:one)
-    @user = users(:francesco)
+    @note = FactoryGirl.create(:note)
+    @user = FactoryGirl.create(:user)
   end
 
   test "should create note" do
