@@ -1,4 +1,4 @@
-# README
+# MyNotes
 
 A web application for writing down your thoughts!
 
