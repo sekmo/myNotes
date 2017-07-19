@@ -10,6 +10,6 @@ class ActiveSupport::TestCase
   #fixtures :all
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
-  FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+  #FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
   FactoryGirl.find_definitions
 end
