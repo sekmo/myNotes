@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def check_logged_in
-    unless user_signed_in?
+    if user_signed_in? == false
       flash[:notice] = 'Please register or login.'
       redirect_to welcome_url
     end

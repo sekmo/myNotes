@@ -42,13 +42,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.1'
-gem 'faker', '~> 1.6', '>= 1.6.3'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'factory_girl', '~> 4.5'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
@@ -62,6 +63,9 @@ group :development do
 end
 
 group :test do
+  gem 'shoulda-matchers', require: false
+  gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'database_cleaner'
   gem 'minitest-reporters'
   gem 'minitest-rails-capybara'
 end
