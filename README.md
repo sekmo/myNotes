@@ -18,3 +18,21 @@ My first Rails web application, to tinker with:
 * nginx configuration
 
 Demo at [https://mynotes.sekmo.cc](https://mynotes.sekmo.cc)
+
+## Installation
+
+Run:
+```shell
+bundle
+bin/rails db:create db:migrate
+bin/rails s
+```
+
+App is running at [localhost:3000](http://localhost:3000/).
+
+## Test
+
+Run:
+```shell
+bundle exec rspec
+```
