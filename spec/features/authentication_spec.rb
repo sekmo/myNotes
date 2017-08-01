@@ -6,7 +6,7 @@ describe "The authentication should work correctly" do
   end
 
   # TODO: WRITE TEST FOR REDIRECT
-  it "should redirect you to notes#index after a successfully login" do
+  it "redirects you to notes#index after a successfully login" do
     visit root_path
     click_on "Login"
     fill_in "Email", with: "test@example.org"

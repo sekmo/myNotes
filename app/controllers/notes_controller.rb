@@ -2,8 +2,8 @@ class NotesController < ApplicationController
   before_action :check_logged_in
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   def index
-    @notes_by_month = Note.page(params[:page]).per(10).grouped_by_month(current_user)
-    @notes = Note.where(user: current_user).page(params[:page]).per(10)
+    @notes = Note.find_by_user(current_user).find_by_search_term(params[:search_term]).page(params[:page])
+    @notes_by_month = @notes.page(params[:page]).grouped_by_month
   end
 
   def show
