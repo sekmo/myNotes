@@ -1,0 +1,4 @@
+.search_box
+  = form_tag(notes_path, method: :get) do
+    = text_field_tag :search_term, params[:search_term], placeholder: "Search your entries"
+    = submit_tag "Search", name: nil, class: "button"
