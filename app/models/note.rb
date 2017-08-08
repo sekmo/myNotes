@@ -13,6 +13,10 @@ class Note < ApplicationRecord
   end
 
   def self.find_by_search_term(term)
-    where("content ILIKE ?", "%#{term}%")
+    if term.present?
+      where("content ILIKE ?", "%#{term}%")
+    else
+      all
+    end
   end
 end

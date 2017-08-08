@@ -1,0 +1,24 @@
+// ==========================================================================
+// Search box
+// ==========================================================================
+
+.search_box {
+  & > form{
+    & > input[type='text'] {
+      width: 62%;
+      @include breakpoint($tablet) {
+        width: 77%; 
+      }
+    }
+    & > input[type='submit'] {
+      width: 36%;
+      text-align: center;
+      padding-top: .625em;
+      padding-bottom: .625em;
+      min-width: inherit;
+      @include breakpoint($tablet) {
+        width: 22%;
+      }
+    }
+  }
+}
