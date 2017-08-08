@@ -53,6 +53,12 @@ describe Note do
     it "doesn't return notes which content doesn't include the search term" do
       expect(Note.find_by_search_term("from")).to_not include(outsider_note)
     end
+
+    context "when the search term is nil" do
+      it "returns all the notes " do
+        expect(Note.find_by_search_term(nil)).to match_array([note1, note2, note3, outsider_note])
+      end
+    end
   end
 
 
