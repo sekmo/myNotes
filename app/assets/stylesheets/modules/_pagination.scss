@@ -1,7 +1,11 @@
 nav.pagination {
   text-align: center;
   font-size: 1.1rem;
+  margin-bottom: 1rem;
   & > .current {
     font-weight: bold;
+  }
+  a {
+    text-decoration: none;
   }
 }

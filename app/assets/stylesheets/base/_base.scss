@@ -20,7 +20,8 @@ html {
 
 // Hide Chrome blue outline
 
-textarea:focus, input:focus{
+input:focus,
+textarea:focus {
     outline: none;
     background: $light_snow;
 }
@@ -49,7 +50,6 @@ p:empty {
 
 a {
 	color: $charcoal;
-	text-decoration: none;
 	&:hover {
 		color: $light_smoke;
 	}

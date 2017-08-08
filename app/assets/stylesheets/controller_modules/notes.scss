@@ -35,6 +35,9 @@
     &__content {
       flex: 1;
       overflow: hidden;
+      & > a {
+        text-decoration: none;
+      }
 
       &__title {
         margin: .4rem .4rem 0 0;

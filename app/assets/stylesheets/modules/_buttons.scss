@@ -6,8 +6,10 @@ button.button,
 input[type="submit"].button,
 a.button {
   font-size: 1rem;
-  margin-bottom: 10px;
-  padding: 1em 3.5em;
+  margin-bottom: rem(10px);
+  padding: 1em;
+  min-width: 10em;
+  text-align: center;
   background: $sky;
   color: white;
 	border: none;
@@ -15,7 +17,7 @@ a.button {
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
-	border-radius: 0.8em;
+	border-radius: .5em;
   transition: background-color .25s ease;
   &:hover{
     background: $light_sky;
@@ -34,6 +36,7 @@ a.button {
 
 a.back-link{
   display: inline-block;
+  text-decoration: none;
   margin-bottom: 2rem;
   &:before {
     content: '\f104';
