@@ -44,15 +44,25 @@ describe Note do
     let(:note1) { create(:note, content: "*From* is the word you're looking for", user: tom) }
     let(:note2) { create(:note, content: "I am from Italy", user: tom) }
     let(:note3) { create(:note, content: "Where are you from?", user: tom) }
+    let(:note4) { create(:note, title: "I've got the word *from* on the title", content: "Hello", user: tom) }
     let(:outsider_note) { create(:note, content: "I don't contain the word you're looking for", user: tom) }
 
     it "returns notes which content includes the search term" do
       expect(Note.find_by_search_term("from")).to match_array([note1, note2, note3])
     end
 
+    it "returns notes which title includes the search term" do
+      expect(Note.find_by_search_term("from")).to match_array([note4])
+    end
+
+    it "returns notes which content or title includes the search term" do
+      expect(Note.find_by_search_term("from")).to match_array([note1, note2, note3, note4])
+    end
+
     it "doesn't return notes which content doesn't include the search term" do
       expect(Note.find_by_search_term("from")).to_not include(outsider_note)
     end
+
 
     context "when the search term is nil" do
       it "returns all the notes " do

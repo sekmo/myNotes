@@ -14,7 +14,7 @@ class Note < ApplicationRecord
 
   def self.find_by_search_term(term)
     if term.present?
-      where("content ILIKE ?", "%#{term}%")
+      where("content ILIKE ?", "%#{term}%").or(where("title ILIKE ?", "%#{term}%"))
     else
       all
     end
