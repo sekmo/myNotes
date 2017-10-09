@@ -63,7 +63,6 @@ describe Note do
       expect(Note.find_by_search_term("from")).to_not include(outsider_note)
     end
 
-
     context "when the search term is nil" do
       it "returns all the notes " do
         expect(Note.find_by_search_term(nil)).to match_array([note1, note2, note3, outsider_note])
@@ -89,6 +88,9 @@ describe Note do
     it "is invalid without a date" do
       expect(build(:note, date: nil)).to_not be_valid
     end
-  end
 
+    it "is invalid without a user" do
+      expect(build(:note, user_id: nil)).to_not be_valid
+    end
+  end
 end
